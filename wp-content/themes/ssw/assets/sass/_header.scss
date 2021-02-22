@@ -1,0 +1,26 @@
+header{
+    &.home{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
+        > svg{
+            position: absolute;
+            width: 100%;
+            background-color: $primaryligth;
+            z-index: -1;
+        }
+        h1{
+            margin: 185px auto 30px;
+        }
+        h2{
+            margin: 0 auto 100px;
+            @media (min-width: $desktops) {
+                max-width: 756px;
+            }
+        }
+        .btns{
+            margin: 0 auto 90px;
+        }
+    }
+}

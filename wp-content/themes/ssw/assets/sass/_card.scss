@@ -1,0 +1,15 @@
+.card{
+    padding: 60px 30px;
+    height: 100%;
+    &.tipo-1{
+        svg{
+            margin: 0 auto 30px;
+        }
+        h2, .t2, h3, .t3{
+            margin: 0 auto 30px;
+        }
+        p{
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+section{
+    &.title-card-buttom{
+        padding: 60px 0;
+        > h2{
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .row a.btns.center{
+            margin: 60px auto 0;
+        }
+        &.bgsvg{
+            position: relative;
+            padding: 0;
+            overflow: hidden;
+            z-index: 1;
+            > svg{
+                position: absolute;
+                z-index: 1;
+            }
+            .content{
+                padding: 60px 0;
+                *{
+                    z-index: 2;
+                }
+                > h2{
+                    text-align: center;
+                    margin-bottom: 60px;
+                }
+                .row a.btns.center{
+                    margin: 60px auto 0;
+                }
+            }
+        }
+    }
+    &.cta{
+        padding: 60px 0;
+        .t1, h2, .t2{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        p{
+            text-align: center;
+            @media (min-width: $desktops) {
+                max-width: 600px;
+                margin: 10px auto;
+            }
+            &:last-child{
+                margin-bottom: 30px;
+            }
+        }
+        .row a.btns.center{
+            margin: 30px auto 0;
+        }
+    }
+}
