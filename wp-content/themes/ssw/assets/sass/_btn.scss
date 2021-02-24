@@ -1,11 +1,15 @@
 .btns{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;//semibold;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 14px;
+    line-height: 20px;
     padding: 11px 30px;
     text-transform: uppercase;
     border-radius: 5px;
+    @media (min-width: $desktops) {
+        font-size: 18px;
+        line-height: 27px;
+    }
     &.primary{
         background-color: $primary;
         color: white;

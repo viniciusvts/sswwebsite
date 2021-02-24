@@ -1,14 +1,45 @@
 nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     & > div{
         display: flex;
     }
     svg{
-        margin: auto 0;
+        margin: 17px 0;
     }
-    ul{
-        display: flex;
+    span.navTogller{
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 27px;
+        text-transform: uppercase;
+        margin: 17px 0;
         margin-left: auto;
+        color: white;
+        @media (min-width: $desktops) {
+            display: none;
+        }
+    }
+    ul.menu{
+        width: 100%;
+        height: 0;
+        overflow: hidden;
         list-style: none;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        transition: all $transition;
+        @media (min-width: $desktops) {
+            display: flex;
+            height: inherit;
+            position: static;
+            margin-left: auto;
+        }
+        &.active{
+            height: 100%;
+        }
         li{
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
@@ -21,11 +52,15 @@ nav{
                 margin-left: auto;
             }
             &:not(:first-child){
-                padding-left: 20px;
-                border-left: solid 2px white;
+                @media (min-width: $desktops) {
+                    padding-left: 20px;
+                    border-left: solid 2px white;
+                }
             }
             &:not(:last-child){
-                padding-right: 20px;
+                @media (min-width: $desktops) {
+                    padding-right: 20px;
+                }
             }
             // wordpress add 'current-menu-item' class to current page
             &.current-menu-item, &:hover{
@@ -37,7 +72,7 @@ nav{
                 color: white;
                 // for hover
                 border-bottom: solid 0px $primary;
-                transition: all .2s;
+                transition: all $transition;
             }
         }
     }

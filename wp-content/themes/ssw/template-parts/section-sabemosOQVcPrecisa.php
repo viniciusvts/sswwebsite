@@ -3,7 +3,7 @@
     <div class="container content">
         <h2 class="t1">Sabemos o que você precisa</h2>
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-lg-4 precard">
                 <div class="card tipo-1 bg-white">
                     <div class="row">
                         <?php echo(file_get_contents(get_template_directory() . '/assets/img/opcao-de-maximizar-tamanho1.svg')); ?>
@@ -13,7 +13,7 @@
                         Nossos layouts são modernos e permitem que a aprência se adeque perfeitamente a telas menores.</p>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-lg-4 precard">
                 <div class="card tipo-1 bg-white">
                     <div class="row">
                         <?php echo(file_get_contents(get_template_directory() . '/assets/img/website1.svg')); ?>
@@ -23,7 +23,7 @@
                         serviços, notícias, portfólio de maneira rápida simples e dinâmica e quando quiser.</p>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-lg-4 precard">
                 <div class="card tipo-1 bg-white">
                     <div class="row">
                         <?php echo(file_get_contents(get_template_directory() . '/assets/img/seo.svg')); ?>

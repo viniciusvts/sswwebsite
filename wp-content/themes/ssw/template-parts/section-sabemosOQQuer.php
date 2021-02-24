@@ -1,8 +1,8 @@
 <section class="title-card-buttom">
-    <h2 class="t1">Sabemos o que você quer</h2>
     <div class="container">
+        <h2 class="t1">Sabemos o que você quer</h2>
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-lg-4 precard">
                 <div class="card tipo-1 bg-s-light">
                     <div class="row">
                         <?php echo(file_get_contents(get_template_directory() . '/assets/img/bar-chart1.svg')); ?>
@@ -12,7 +12,7 @@
                         Um site próprio é a estratégia principal do marketing digital com foco em resultados.</p>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-lg-4 precard">
                 <div class="card tipo-1 bg-s-light">
                     <div class="row">
                         <?php echo(file_get_contents(get_template_directory() . '/assets/img/web-design1.svg')); ?>
@@ -22,7 +22,7 @@
                         Google, Yahoo, Bing e Ask.</p>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-lg-4 precard">
                 <div class="card tipo-1 bg-s-light">
                     <div class="row">
                         <?php echo(file_get_contents(get_template_directory() . '/assets/img/opcao-de-maximizar-tamanho1.svg')); ?>

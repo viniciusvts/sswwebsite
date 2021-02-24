@@ -1,3 +1,9 @@
+.precard:not(:last-child){
+    margin-bottom: 30px;
+    @media (min-width: $desktops) {
+        margin-bottom: 0;
+    }
+}
 .card{
     padding: 60px 30px;
     height: 100%;

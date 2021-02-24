@@ -1,7 +1,7 @@
 section{
     &.title-card-buttom{
         padding: 60px 0;
-        > h2{
+        h2{
             text-align: center;
             margin-bottom: 60px;
         }
@@ -15,10 +15,11 @@ section{
             z-index: 1;
             > svg{
                 position: absolute;
-                z-index: 1;
+                z-index: -1;
             }
             .content{
-                padding: 60px 0;
+                padding-top: 60px;
+                padding-bottom: 60px;
                 *{
                     z-index: 2;
                 }

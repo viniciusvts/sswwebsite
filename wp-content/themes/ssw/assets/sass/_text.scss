@@ -6,21 +6,37 @@ h1, .t1, h2, .t2, h3, .t3{
 p{
     font-family: Arial, Helvetica, sans-serif;
     color: $primaryDark;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 20px;
+    @media (min-width: $desktops) {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 h3, .t3{
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 14px;
+    line-height: 20px;
     text-align: center;
+    @media (min-width: $desktops) {
+        font-size: 18px;
+        line-height: 27px;
+    }
 }
 h2, .t2{
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 32px;
     text-align: center;
+    @media (min-width: $desktops) {
+        font-size: 24px;
+        line-height: 36px;
+    }
 }
 h1, .t1{
-    font-size: 36px;
-    line-height: 54px;
+    font-size: 28px;
+    line-height: 36px;
     text-align: center;
+    @media (min-width: $desktops) {
+        font-size: 36px;
+        line-height: 54px;
+    }
 }

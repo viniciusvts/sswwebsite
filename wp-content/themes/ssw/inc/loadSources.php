@@ -9,14 +9,14 @@
 function add_css_and_js() {
   //scripts: wp_enqueue_script( $nome, $origem, $dependencia, $versao, $rodape );
 
-  // $jsInternalPath = get_template_directory() . "/"."js/";
-  // $jsUriPath = get_template_directory_uri() . "/"."js/";
+  $jsInternalPath = get_template_directory() . "/"."assets/js/";
+  $jsUriPath = get_template_directory_uri() . "/"."assets/js/";
 
-  // $archive = 'script.js';
-  // $urlPath = $jsUriPath . $archive;
-  // $internalPath = $jsInternalPath . $archive;
-  // $fileVersion = filemtime($internalPath);
-  // wp_enqueue_script( $archive, $urlPath, array (), $fileVersion, true);
+  $archive = 'script.js';
+  $urlPath = $jsUriPath . $archive;
+  $internalPath = $jsInternalPath . $archive;
+  $fileVersion = filemtime($internalPath);
+  wp_enqueue_script( $archive, $urlPath, array (), $fileVersion, true);
   
   //###############################################################################################
   //styles: wp_enqueue_style( $nome, $origem, $dependencia, $versao, $media );
@@ -29,7 +29,7 @@ function add_css_and_js() {
   $urlPath = $cssUriPath . $archive;
   $internalPath = $cssInternalPath . $archive;
   $fileVersion = filemtime($internalPath);
-  wp_enqueue_style( $archive, $urlPath, array('poppinFont'), $fileVersion, $media );
+  wp_enqueue_style( $archive, $urlPath, array(), $fileVersion, $media );
   // Poppins fonte
   wp_enqueue_style( 'poppinFont',
     'https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap',
