@@ -55,8 +55,14 @@ section{
     }
     &.formContact{
         padding: 60px 0;
+        textarea{
+            height: 245px;
+        }
         .btns.center{
             margin: 30px auto 0;
+            @media (min-width: $desktops) {
+                margin: 60px auto 0;
+            }
         }
     }
 }

@@ -2053,8 +2053,13 @@ label {
   margin-bottom: 10px;
 }
 
-input:not(:last-child) {
+input {
   margin-bottom: 30px;
+}
+@media (min-width: 991.98px) {
+  input:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .color-p {
@@ -2248,8 +2253,16 @@ section.cta .row a.btns.center {
 section.formContact {
   padding: 60px 0;
 }
+section.formContact textarea {
+  height: 245px;
+}
 section.formContact .btns.center {
   margin: 30px auto 0;
+}
+@media (min-width: 991.98px) {
+  section.formContact .btns.center {
+    margin: 60px auto 0;
+  }
 }
 
 header.home, header.pageContent {
