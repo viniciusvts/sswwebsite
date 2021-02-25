@@ -1,3 +1,12 @@
+// reset "button" e "a"
+a.btns{display: inline-block;}
+button.btns{
+    cursor: pointer;
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}
 .btns{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;//semibold;

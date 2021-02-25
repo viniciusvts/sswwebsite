@@ -1,5 +1,5 @@
 header{
-    &.home{
+    &.home, &.pageContent{
         flex-wrap: wrap;
         position: relative;
         overflow: hidden;
@@ -10,6 +10,8 @@ header{
             background-color: $primaryligth;
             z-index: -1;
         }
+    }
+    &.home{
         h1{
             margin: 120px auto 30px;
             @media (min-width: $desktops) {
@@ -25,6 +27,21 @@ header{
         }
         .btns{
             margin: 0 auto 90px;
+        }
+    }
+    &.pageContent{
+        h1{
+            margin: 90px auto 30px;
+            @media (min-width: $desktops) {
+                margin: 140px auto 30px;
+            }
+        }
+        h2{
+            margin: 0 auto 30px;
+            @media (min-width: $desktops) {
+                max-width: 756px;
+                margin: 0 auto 90px;
+            }
         }
     }
 }
