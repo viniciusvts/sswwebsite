@@ -1,13 +1,41 @@
 footer{
-    padding: 30px 0 90px;
-    svg{
-        margin-bottom: 30px;
+    *{
+        color: white;
     }
     h2, .t2{
         margin-bottom: 15px;
-        text-align: left;
     }
-    *{
-        color: white;
+    padding: 30px 0 30px;
+    .c-1{
+        margin-bottom: 30px;
+        @media (min-width: $desktops) {
+            margin-bottom: 0;
+        }
+        h2, p, li{
+            text-align: center;
+            @media (min-width: $desktops) {
+                text-align: left;
+            }
+        }
+    }
+    .c-2{
+        margin-bottom: 30px;
+        svg{
+            margin: auto;
+        }
+    }
+    .c-3{
+        h2, p, li{
+            text-align: center;
+            @media (min-width: $desktops) {
+                text-align: right;
+            }
+        }
+    }
+    ul.nav{
+        list-style: none;
+        li{
+            margin-bottom: 5px;
+        }
     }
 }

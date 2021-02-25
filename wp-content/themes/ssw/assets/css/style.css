@@ -1904,14 +1904,14 @@ h1, .t1, h2, .t2, h3, .t3 {
   color: #002927;
 }
 
-p {
+p, ul, li {
   font-family: Arial, Helvetica, sans-serif;
   color: #002927;
   font-size: 14px;
   line-height: 20px;
 }
 @media (min-width: 991.98px) {
-  p {
+  p, ul, li {
     font-size: 18px;
     line-height: 24px;
   }
@@ -2252,17 +2252,49 @@ header.home .btns {
 }
 
 footer {
-  padding: 30px 0 90px;
-}
-footer svg {
-  margin-bottom: 30px;
-}
-footer h2, footer .t2 {
-  margin-bottom: 15px;
-  text-align: left;
+  padding: 30px 0 30px;
 }
 footer * {
   color: white;
+}
+footer h2, footer .t2 {
+  margin-bottom: 15px;
+}
+footer .c-1 {
+  margin-bottom: 30px;
+}
+@media (min-width: 991.98px) {
+  footer .c-1 {
+    margin-bottom: 0;
+  }
+}
+footer .c-1 h2, footer .c-1 p, footer .c-1 li {
+  text-align: center;
+}
+@media (min-width: 991.98px) {
+  footer .c-1 h2, footer .c-1 p, footer .c-1 li {
+    text-align: left;
+  }
+}
+footer .c-2 {
+  margin-bottom: 30px;
+}
+footer .c-2 svg {
+  margin: auto;
+}
+footer .c-3 h2, footer .c-3 p, footer .c-3 li {
+  text-align: center;
+}
+@media (min-width: 991.98px) {
+  footer .c-3 h2, footer .c-3 p, footer .c-3 li {
+    text-align: right;
+  }
+}
+footer ul.nav {
+  list-style: none;
+}
+footer ul.nav li {
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@ h1, .t1, h2, .t2, h3, .t3{
     font-weight: 600;//semibold
     color: $primaryDark;
 }
-p{
+p, ul, li{
     font-family: Arial, Helvetica, sans-serif;
     color: $primaryDark;
     font-size: 14px;
