@@ -13,17 +13,18 @@
             </div>
             <div class="col-md-4 offset-md-1 c-3">
                 <h2>Principais links</h2>
-                <ul class="nav">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/blog/">Blog</a>
-                    </li>
-                    <li>
-                        <a href="/contato/">Contato</a>
-                    </li>
-                </ul>
+                <?php
+                // https://developer.wordpress.org/reference/functions/wp_nav_menu/#menu-item-css-classes
+                wp_nav_menu(
+                array(
+                    'container' => false,
+                    'theme_location' => 'footer-links',
+                    'depth' => 1,
+                    'menu_id' => 'footermenu',
+                    'menu_class' => 'nav',
+                )
+                );
+                ?>
             </div>
         </div>
     </div>

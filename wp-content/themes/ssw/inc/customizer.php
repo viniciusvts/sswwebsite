@@ -3,7 +3,7 @@
 register_nav_menus (
   array (
   	'main' => 'Menu Principal SSW',
-    'footer-1' => 'Menu Footer 01',
+    'footer-links' => 'Menu Footer Links',
     'footer-2' => 'Menu Footer 02',
   )
 );
