@@ -23,24 +23,42 @@ button.btns{
         background-color: $primary;
         color: white;
         box-shadow: 2px 2px 4px #CCE0DF;
+            transition: all $transition;
+        &:hover{
+            box-shadow: 4px 4px 4px #CCE0DF;
+            transform: translate(-2px, -2px);
+        }
     }
     &.outlineprimary{
         background-color: white;
         color: $primary;
         border: solid $primary 3px;
         box-shadow: 2px 2px 4px #CCE0DF;
+        transition: all $transition;
+        &:hover{
+            box-shadow: 4px 4px 4px #CCE0DF;
+            transform: translate(-2px, -2px);
+        }
     }
     &.secondary{
         background-color: $secondary;
         color: white;
         box-shadow: 2px 2px 4px #F8EDD2;
+        transition: all $transition;
+        &:hover{
+            box-shadow: 4px 4px 4px #F8EDD2;
+            transform: translate(-2px, -2px);
+        }
     }
     &.outlinesecondary{
         background-color: white;
         color: $secondary;
         border: solid $secondary 3px;
         box-shadow: 2px 2px 4px #F8EDD2;
+        transition: all $transition;
+        &:hover{
+            box-shadow: 4px 4px 4px #F8EDD2;
+            transform: translate(-2px, -2px);
+        }
     }
 }
-
-a.btns{display: inline-block;}

@@ -14,10 +14,21 @@ input, textarea{
     &:focus{
         outline: none;
     }
+    box-shadow: 2px 2px 4px #F8EDD2;
+    transition: all $transition;
+    &:hover{
+        box-shadow: 4px 4px 4px #F8EDD2;
+        transform: translate(-2px, -2px);
+    }
 }
 label{
     margin-bottom: 10px;
 }
-input:not(:last-child){
+input{
     margin-bottom: 30px;
+    &:last-child{
+        @media (min-width: $desktops) {
+            margin-bottom: 0;
+        }
+    }
 }

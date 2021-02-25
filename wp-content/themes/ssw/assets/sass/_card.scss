@@ -7,6 +7,10 @@
 .card{
     padding: 60px 30px;
     height: 100%;
+    transition: all $transition;
+    &:hover{
+        transform: scale(1.1);
+    }
     &.tipo-1{
         svg{
             margin: 0 auto 30px;

@@ -1984,27 +1984,43 @@ button.btns:focus {
   background-color: #00645F;
   color: white;
   box-shadow: 2px 2px 4px #CCE0DF;
+  transition: all 0.2s ease-out;
+}
+.btns.primary:hover {
+  box-shadow: 4px 4px 4px #CCE0DF;
+  transform: translate(-2px, -2px);
 }
 .btns.outlineprimary {
   background-color: white;
   color: #00645F;
   border: solid #00645F 3px;
   box-shadow: 2px 2px 4px #CCE0DF;
+  transition: all 0.2s ease-out;
+}
+.btns.outlineprimary:hover {
+  box-shadow: 4px 4px 4px #CCE0DF;
+  transform: translate(-2px, -2px);
 }
 .btns.secondary {
   background-color: #AC9969;
   color: white;
   box-shadow: 2px 2px 4px #F8EDD2;
+  transition: all 0.2s ease-out;
+}
+.btns.secondary:hover {
+  box-shadow: 4px 4px 4px #F8EDD2;
+  transform: translate(-2px, -2px);
 }
 .btns.outlinesecondary {
   background-color: white;
   color: #AC9969;
   border: solid #AC9969 3px;
   box-shadow: 2px 2px 4px #F8EDD2;
+  transition: all 0.2s ease-out;
 }
-
-a.btns {
-  display: inline-block;
+.btns.outlinesecondary:hover {
+  box-shadow: 4px 4px 4px #F8EDD2;
+  transform: translate(-2px, -2px);
 }
 
 .precard:not(:last-child) {
@@ -2019,6 +2035,10 @@ a.btns {
 .card {
   padding: 60px 30px;
   height: 100%;
+  transition: all 0.2s ease-out;
+}
+.card:hover {
+  transform: scale(1.1);
 }
 .card.tipo-1 svg {
   margin: 0 auto 30px;
@@ -2044,9 +2064,15 @@ input, textarea {
   border-radius: 5px;
   background-color: white;
   border: 3px solid #AC9969;
+  box-shadow: 2px 2px 4px #F8EDD2;
+  transition: all 0.2s ease-out;
 }
 input:focus, textarea:focus {
   outline: none;
+}
+input:hover, textarea:hover {
+  box-shadow: 4px 4px 4px #F8EDD2;
+  transform: translate(-2px, -2px);
 }
 
 label {
@@ -2149,7 +2175,7 @@ nav ul.menu {
   position: fixed;
   top: 60px;
   right: 0;
-  transition: all 0.2s;
+  transition: all 0.2s ease-out;
 }
 @media (min-width: 991.98px) {
   nav ul.menu {
@@ -2185,13 +2211,26 @@ nav ul.menu li:first-child {
     padding-right: 20px;
   }
 }
-nav ul.menu li.current-menu-item a, nav ul.menu li:hover a {
-  border-bottom: solid 3px #00645F;
-}
 nav ul.menu li a {
   color: white;
   border-bottom: solid 0px #00645F;
-  transition: all 0.2s;
+  transition: all 0.2s ease-out;
+}
+@media (min-width: 991.98px) {
+  nav ul.menu li a {
+    display: block;
+  }
+}
+nav ul.menu li a:hover {
+  border-bottom: solid 3px #00645F;
+  transform: translate(0px, -2px);
+}
+nav ul.menu li.current-menu-item a {
+  border-bottom: solid 3px #00645F;
+  cursor: default;
+}
+nav ul.menu li.current-menu-item a:hover:not(.current-menu-item) {
+  transform: none;
 }
 
 section.title-card-buttom {

@@ -62,17 +62,30 @@ nav{
                     padding-right: 20px;
                 }
             }
-            // wordpress add 'current-menu-item' class to current page
-            &.current-menu-item, &:hover{
-                a{
-                    border-bottom: solid 3px $primary;
-                }
-            }
             a{
                 color: white;
                 // for hover
                 border-bottom: solid 0px $primary;
                 transition: all $transition;
+                @media (min-width: $desktops) {
+                    display: block;
+                }
+                &:hover{
+                    border-bottom: solid 3px $primary;
+                    transform: translate(0px, -2px);
+                }
+            }
+            // wordpress add 'current-menu-item' class to current page
+            &.current-menu-item{
+                a{
+                    border-bottom: solid 3px $primary;
+                    // the current-menu-item dont has pointer cursor:
+                    cursor: default;
+                    &:hover:not(.current-menu-item){
+                        // the current-menu-item dont move on hover:
+                        transform: none;
+                    }
+                }
             }
         }
     }
