@@ -1894,6 +1894,7 @@ html {
     align-self: stretch !important;
   }
 }
+/*! Vinicius de Santana */
 a {
   text-decoration: none;
 }
@@ -1951,6 +1952,112 @@ h1, .t1 {
     font-size: 36px;
     line-height: 54px;
   }
+}
+
+.text-left {
+  text-align: left;
+}
+
+@media (min-width: 767.98px) {
+  .text-md-left {
+    text-align: left;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .text-lg-left {
+    text-align: left;
+  }
+}
+
+.blogcards {
+  transition: all 0.2s ease-out;
+}
+.blogcards:hover {
+  box-shadow: 4px 4px 4px #EBFFFE;
+  transform: translate(-2px, -2px);
+}
+.blogcards:not(:last-child) {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: solid 2px #002927;
+}
+@media (min-width: 991.98px) {
+  .blogcards:not(:last-child) {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+}
+.blogcards article {
+  margin-bottom: 15px;
+}
+@media (min-width: 991.98px) {
+  .blogcards article {
+    margin-bottom: 30px;
+  }
+}
+.blogcards article h2 {
+  margin-bottom: 15px;
+}
+@media (min-width: 991.98px) {
+  .blogcards article h2 {
+    margin-bottom: 30px;
+  }
+}
+.blogcards article img {
+  margin-bottom: 15px;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 991.98px) {
+  .blogcards article img {
+    margin-bottom: 30px;
+    border-radius: 5px;
+  }
+}
+.blogcards button {
+  margin: 0 0 15px auto;
+  display: block;
+}
+@media (min-width: 991.98px) {
+  .blogcards button {
+    margin-bottom: 30px;
+  }
+}
+
+.blog-feed {
+  margin-top: 30px;
+}
+
+.sidebar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 90px;
+}
+@media (min-width: 991.98px) {
+  .sidebar {
+    margin-bottom: 30px;
+  }
+}
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+.sidebar button, .sidebar a {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 991.98px) {
+  .sidebar button, .sidebar a {
+    margin: 0;
+  }
+}
+@media (min-width: 991.98px) {
+  .sidebar button.secondary, .sidebar a.secondary {
+    margin-bottom: 90px;
+  }
+}
+.sidebar input {
+  margin-bottom: 15px;
 }
 
 a.btns {
@@ -2301,6 +2408,24 @@ section.formContact .btns.center {
 @media (min-width: 991.98px) {
   section.formContact .btns.center {
     margin: 60px auto 0;
+  }
+}
+section.pageContent, section.blogContent {
+  margin-bottom: 30px;
+}
+section.pageContent h2, section.pageContent h3, section.pageContent h4, section.pageContent h5, section.blogContent h2, section.blogContent h3, section.blogContent h4, section.blogContent h5 {
+  text-align: left;
+  margin: 20px 0;
+}
+section.pageContent img, section.blogContent img {
+  margin-bottom: 15px;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 991.98px) {
+  section.pageContent img, section.blogContent img {
+    margin-bottom: 30px;
+    border-radius: 5px;
   }
 }
 

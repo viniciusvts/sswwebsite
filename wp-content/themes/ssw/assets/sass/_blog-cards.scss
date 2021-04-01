@@ -1,0 +1,44 @@
+.blogcards{
+    transition: all $transition;
+    &:hover{
+        box-shadow: 4px 4px 4px $primaryligth;
+        transform: translate(-2px, -2px);
+    }
+    &:not(:last-child){
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        @media (min-width: $desktops) {
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        border-bottom: solid 2px $primaryDark;
+    }
+    article{
+        margin-bottom: 15px;
+        @media (min-width: $desktops) {
+            margin-bottom: 30px;
+        }
+        h2{
+            margin-bottom: 15px;
+            @media (min-width: $desktops) {
+                margin-bottom: 30px;
+            }
+        }
+        img{
+            margin-bottom: 15px;
+            width: 100%;
+            height: auto;
+            @media (min-width: $desktops) {
+                margin-bottom: 30px;
+                border-radius: 5px;
+            }
+        }
+    }
+    button{
+        margin: 0 0 15px auto;
+        display: block;
+        @media (min-width: $desktops) {
+            margin-bottom: 30px;
+        }
+    }
+}

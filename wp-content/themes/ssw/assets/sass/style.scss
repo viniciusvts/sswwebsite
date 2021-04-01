@@ -5,11 +5,16 @@
     padding: 0;
 }
 @import "bootstrap/bootstrap-grid.scss";
+
+/*! Vinicius de Santana */
 // primeiro as variáveis
 @import "variables";
 
 @import "reset";
 @import "text";
+@import "blog-cards";
+@import "blog-feed";
+@import "blog-sidebar";
 @import "btn";
 @import "card";
 @import "input";

@@ -1,7 +1,7 @@
 /*!Vinicius de Santana*/
 //https://javascript-minifier.com/
 //https://skalman.github.io/UglifyJS-online/
-(function ssw(window, console, querySelector, querySelectorAll) {
+(function ssw(window, document, console, querySelector, querySelectorAll) {
     // nav menu
     document.addEventListener("DOMContentLoaded", DOMContentLoaded);
     window.addEventListener("load", load);
@@ -34,4 +34,4 @@
             }
         }
     }
-})(window, console, x=>document.querySelector(x), x=>document.querySelectorAll(x));
+})(window, document, console, x=>document.querySelector(x), x=>document.querySelectorAll(x));

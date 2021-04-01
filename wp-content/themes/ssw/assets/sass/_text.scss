@@ -40,3 +40,16 @@ h1, .t1{
         line-height: 54px;
     }
 }
+.text-left{
+    text-align: left;
+}
+.text-md-left{
+    @media (min-width: $tablets) {
+        text-align: left;
+    }
+}
+.text-lg-left{
+    @media (min-width: $desktops) {
+        text-align: left;
+    }
+}
