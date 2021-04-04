@@ -32,8 +32,8 @@ header{
     &.pageContent{
         h1{
             margin: 90px auto 30px;
-            @media (min-width: $desktops) {
-                margin: 140px auto 30px;
+            &.has-img{
+                margin: 30px auto 30px;
             }
         }
         h2{
@@ -42,6 +42,9 @@ header{
                 max-width: 756px;
                 margin: 0 auto 90px;
             }
+        }
+        img{
+            width: 100%;
         }
     }
 }
