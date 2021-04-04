@@ -1,46 +1,16 @@
 nav{
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    & > div{
-        display: flex;
-    }
-    svg{
-        margin: 17px 0;
-    }
-    span.navTogller{
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-        font-weight: 600;
-        text-align: center;
-        line-height: 27px;
-        text-transform: uppercase;
-        margin: 17px 0;
-        margin-left: auto;
-        color: white;
-        @media (min-width: $desktops) {
-            display: none;
-        }
-    }
-    ul.menu{
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-        list-style: none;
+    &.top-menu{
         position: fixed;
-        top: 60px;
-        right: 0;
-        transition: all $transition;
-        @media (min-width: $desktops) {
+        width: 100%;
+        top: 0;
+        z-index: 10;
+        & > div{
             display: flex;
-            height: inherit;
-            position: static;
-            margin-left: auto;
         }
-        &.active{
-            height: 100%;
+        svg{
+            margin: 17px 0;
         }
-        li{
+        span.navTogller{
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
             font-weight: 600;
@@ -48,43 +18,120 @@ nav{
             line-height: 27px;
             text-transform: uppercase;
             margin: 17px 0;
-            &:first-child{
+            margin-left: auto;
+            color: white;
+            @media (min-width: $desktops) {
+                display: none;
+            }
+        }
+        ul.menu{
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            list-style: none;
+            position: fixed;
+            top: 60px;
+            right: 0;
+            transition: all $transition;
+            @media (min-width: $desktops) {
+                display: flex;
+                height: inherit;
+                position: static;
                 margin-left: auto;
             }
-            &:not(:first-child){
-                @media (min-width: $desktops) {
-                    padding-left: 20px;
-                    border-left: solid 2px white;
+            &.active{
+                height: 100%;
+            }
+            li{
+                font-family: 'Poppins', sans-serif;
+                font-size: 18px;
+                font-weight: 600;
+                text-align: center;
+                line-height: 27px;
+                text-transform: uppercase;
+                margin: 17px 0;
+                &:first-child{
+                    margin-left: auto;
+                }
+                &:not(:first-child){
+                    @media (min-width: $desktops) {
+                        padding-left: 20px;
+                        border-left: solid 2px white;
+                    }
+                }
+                &:not(:last-child){
+                    @media (min-width: $desktops) {
+                        padding-right: 20px;
+                    }
+                }
+                a{
+                    color: white;
+                    // for hover
+                    border-bottom: solid 0px $primary;
+                    transition: all $transition;
+                    @media (min-width: $desktops) {
+                        display: block;
+                    }
+                    &:hover{
+                        border-bottom: solid 3px $primary;
+                        transform: translate(0px, -2px);
+                    }
+                }
+                // wordpress add 'current-menu-item' class to current page
+                &.current-menu-item{
+                    a{
+                        border-bottom: solid 3px $primary;
+                        // the current-menu-item dont has pointer cursor:
+                        cursor: default;
+                        &:hover:not(.current-menu-item){
+                            // the current-menu-item dont move on hover:
+                            transform: none;
+                        }
+                    }
                 }
             }
-            &:not(:last-child){
-                @media (min-width: $desktops) {
-                    padding-right: 20px;
-                }
+        }
+    }
+    &.pagination{ // the_posts_pagination();
+        display: block;
+        .screen-reader-text{
+            display: block;
+            color: $primaryDark;
+        }
+        .nav-links{
+            display: flex;
+            margin: 0 auto;
+            :first-child{
+                margin-left: auto;
             }
-            a{
-                color: white;
-                // for hover
-                border-bottom: solid 0px $primary;
+            :last-child{
+                margin-right: auto;
+            }
+            a, span.current{  
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;//semibold;
+                font-size: 14px;
+                line-height: 20px;
+                padding: 0px 6px;
+                text-transform: uppercase;
+                border-radius: 5px;
+                //
+                background-color: white;
+                color: $primary;
                 transition: all $transition;
                 @media (min-width: $desktops) {
-                    display: block;
-                }
-                &:hover{
-                    border-bottom: solid 3px $primary;
-                    transform: translate(0px, -2px);
+                    font-size: 18px;
+                    line-height: 27px;
                 }
             }
-            // wordpress add 'current-menu-item' class to current page
-            &.current-menu-item{
-                a{
-                    border-bottom: solid 3px $primary;
-                    // the current-menu-item dont has pointer cursor:
-                    cursor: default;
-                    &:hover:not(.current-menu-item){
-                        // the current-menu-item dont move on hover:
-                        transform: none;
-                    }
+            span.current{
+                border: solid transparent 3px;
+            }
+            a{
+                border: solid $primary 3px;
+                box-shadow: 2px 2px 4px #CCE0DF;
+                &:hover{
+                    transform: scale(1.05);
                 }
             }
         }

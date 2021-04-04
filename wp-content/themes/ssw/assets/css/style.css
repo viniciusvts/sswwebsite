@@ -1971,25 +1971,22 @@ h1, .t1 {
 }
 
 .blogcards {
-  transition: all 0.2s ease-out;
-}
-.blogcards:hover {
-  box-shadow: 4px 4px 4px #EBFFFE;
-  transform: translate(-2px, -2px);
-}
-.blogcards:not(:last-child) {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: solid 2px #002927;
 }
 @media (min-width: 991.98px) {
-  .blogcards:not(:last-child) {
+  .blogcards {
     padding-bottom: 30px;
     margin-bottom: 30px;
   }
 }
 .blogcards article {
   margin-bottom: 15px;
+  transition: all 0.2s ease-out;
+}
+.blogcards article:hover {
+  transform: scale(1.01);
 }
 @media (min-width: 991.98px) {
   .blogcards article {
@@ -2247,18 +2244,19 @@ input {
   background-color: #F1EDE5;
 }
 
-nav {
+nav.top-menu {
   position: fixed;
   width: 100%;
+  top: 0;
   z-index: 10;
 }
-nav > div {
+nav.top-menu > div {
   display: flex;
 }
-nav svg {
+nav.top-menu svg {
   margin: 17px 0;
 }
-nav span.navTogller {
+nav.top-menu span.navTogller {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -2270,11 +2268,11 @@ nav span.navTogller {
   color: white;
 }
 @media (min-width: 991.98px) {
-  nav span.navTogller {
+  nav.top-menu span.navTogller {
     display: none;
   }
 }
-nav ul.menu {
+nav.top-menu ul.menu {
   width: 100%;
   height: 0;
   overflow: hidden;
@@ -2285,17 +2283,17 @@ nav ul.menu {
   transition: all 0.2s ease-out;
 }
 @media (min-width: 991.98px) {
-  nav ul.menu {
+  nav.top-menu ul.menu {
     display: flex;
     height: inherit;
     position: static;
     margin-left: auto;
   }
 }
-nav ul.menu.active {
+nav.top-menu ul.menu.active {
   height: 100%;
 }
-nav ul.menu li {
+nav.top-menu ul.menu li {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -2304,40 +2302,85 @@ nav ul.menu li {
   text-transform: uppercase;
   margin: 17px 0;
 }
-nav ul.menu li:first-child {
+nav.top-menu ul.menu li:first-child {
   margin-left: auto;
 }
 @media (min-width: 991.98px) {
-  nav ul.menu li:not(:first-child) {
+  nav.top-menu ul.menu li:not(:first-child) {
     padding-left: 20px;
     border-left: solid 2px white;
   }
 }
 @media (min-width: 991.98px) {
-  nav ul.menu li:not(:last-child) {
+  nav.top-menu ul.menu li:not(:last-child) {
     padding-right: 20px;
   }
 }
-nav ul.menu li a {
+nav.top-menu ul.menu li a {
   color: white;
   border-bottom: solid 0px #00645F;
   transition: all 0.2s ease-out;
 }
 @media (min-width: 991.98px) {
-  nav ul.menu li a {
+  nav.top-menu ul.menu li a {
     display: block;
   }
 }
-nav ul.menu li a:hover {
+nav.top-menu ul.menu li a:hover {
   border-bottom: solid 3px #00645F;
   transform: translate(0px, -2px);
 }
-nav ul.menu li.current-menu-item a {
+nav.top-menu ul.menu li.current-menu-item a {
   border-bottom: solid 3px #00645F;
   cursor: default;
 }
-nav ul.menu li.current-menu-item a:hover:not(.current-menu-item) {
+nav.top-menu ul.menu li.current-menu-item a:hover:not(.current-menu-item) {
   transform: none;
+}
+nav.pagination {
+  display: block;
+}
+nav.pagination .screen-reader-text {
+  display: block;
+  color: #002927;
+}
+nav.pagination .nav-links {
+  display: flex;
+  margin: 0 auto;
+}
+nav.pagination .nav-links :first-child {
+  margin-left: auto;
+}
+nav.pagination .nav-links :last-child {
+  margin-right: auto;
+}
+nav.pagination .nav-links a, nav.pagination .nav-links span.current {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0px 6px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: white;
+  color: #00645F;
+  transition: all 0.2s ease-out;
+}
+@media (min-width: 991.98px) {
+  nav.pagination .nav-links a, nav.pagination .nav-links span.current {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+nav.pagination .nav-links span.current {
+  border: solid transparent 3px;
+}
+nav.pagination .nav-links a {
+  border: solid #00645F 3px;
+  box-shadow: 2px 2px 4px #CCE0DF;
+}
+nav.pagination .nav-links a:hover {
+  transform: scale(1.05);
 }
 
 section.title-card-buttom {
@@ -2427,6 +2470,9 @@ section.pageContent img, section.blogContent img {
     margin-bottom: 30px;
     border-radius: 5px;
   }
+}
+section.blog-feed {
+  margin-bottom: 30px;
 }
 
 header.home, header.pageContent {

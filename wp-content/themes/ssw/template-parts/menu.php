@@ -1,4 +1,4 @@
-<nav class="bg-p-dark">
+<nav class="bg-p-dark top-menu">
   <div class="container">
     <a class="d-flex" href="/">
       <?php echo(file_get_contents(get_template_directory() . '/assets/img/sswLogowhite.svg')); ?>

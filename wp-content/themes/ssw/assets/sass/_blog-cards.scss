@@ -1,20 +1,17 @@
 .blogcards{
-    transition: all $transition;
-    &:hover{
-        box-shadow: 4px 4px 4px $primaryligth;
-        transform: translate(-2px, -2px);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    @media (min-width: $desktops) {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
-    &:not(:last-child){
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-        @media (min-width: $desktops) {
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-        }
-        border-bottom: solid 2px $primaryDark;
-    }
+    border-bottom: solid 2px $primaryDark;
     article{
         margin-bottom: 15px;
+        transition: all $transition;
+        &:hover{
+            transform: scale(1.01);
+        }
         @media (min-width: $desktops) {
             margin-bottom: 30px;
         }

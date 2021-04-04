@@ -13,5 +13,5 @@ get_template_part('template-parts/header', 'page');
     </div>
 </div>
 <?php
-get_template_part('template-parts/section', 'cta');
+get_template_part('template-parts/section', 'cta-bggreen');
 get_footer();
